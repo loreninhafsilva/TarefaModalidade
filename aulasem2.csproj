@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E652818E-892B-4BAD-B2FA-E7C19DCD44B7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>aulasem2</RootNamespace>
+    <AssemblyName>aulasem2</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data">
+      <HintPath>v4.6.2\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Aluno.cs" />
+    <Compile Include="atualizarModalidade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="atualizarModalidade.Designer.cs">
+      <DependentUpon>atualizarModalidade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DAO_Conexao.cs" />
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cadastrarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cadastrarUsuario.Designer.cs">
+      <DependentUpon>cadastrarUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form3.Designer.cs">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="excluirAluno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="excluirAluno.Designer.cs">
+      <DependentUpon>excluirAluno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="atualizarAluno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="atualizarAluno.Designer.cs">
+      <DependentUpon>atualizarAluno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cadastrarModalidade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cadastrarModalidade.Designer.cs">
+      <DependentUpon>cadastrarModalidade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="consultarModalidade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="consultarModalidade.Designer.cs">
+      <DependentUpon>consultarModalidade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="excluirModalidade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="excluirModalidade.Designer.cs">
+      <DependentUpon>excluirModalidade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modalidade.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="atualizarModalidade.resx">
+      <DependentUpon>atualizarModalidade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cadastrarUsuario.resx">
+      <DependentUpon>cadastrarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form3.resx">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="excluirAluno.resx">
+      <DependentUpon>excluirAluno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="atualizarAluno.resx">
+      <DependentUpon>atualizarAluno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cadastrarModalidade.resx">
+      <DependentUpon>cadastrarModalidade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="consultarModalidade.resx">
+      <DependentUpon>consultarModalidade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="excluirModalidade.resx">
+      <DependentUpon>excluirModalidade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
