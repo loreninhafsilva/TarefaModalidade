@@ -1,7 +1,7 @@
 ﻿
 namespace aulasem2
 {
-    partial class Form3
+    partial class cadastrarAluno
     {
         /// <summary>
         /// Required designer variable.

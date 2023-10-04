@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace aulasem2
 {
-    public partial class Form3 : Form
+    public partial class cadastrarAluno : Form
     {
-        public Form3()
+        public cadastrarAluno()
         {
             InitializeComponent();
         }

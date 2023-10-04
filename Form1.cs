@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace aulasem2
 {
-    public partial class Login : Form
+    public partial class Form1 : Form
     {
-        public Login()
+        public Form1()
         {
             InitializeComponent();
             menuStrip1.Enabled = false;
@@ -25,7 +25,7 @@ namespace aulasem2
 
         private void cadastrarAlunoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            cadastrarAluno form3 = new cadastrarAluno();
+            Form3 form3 = new Form3();
             form3.MdiParent = this;
             form3.Show();
             groupBox1.Visible = false;
@@ -33,7 +33,7 @@ namespace aulasem2
 
         private void cadastrarLoginToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            cadastrarUsuario form2 = new cadastrarUsuario();
+            Form2 form2 = new Form2();
             form2.MdiParent = this;
             form2.Show();
             groupBox1.Visible = false;
@@ -74,7 +74,7 @@ namespace aulasem2
 
         private void consultarAlunoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            excluirAluno form4 = new excluirAluno();
+            Form4 form4 = new Form4();
             form4.MdiParent = this;
             form4.Show();
             groupBox1.Visible = false;
@@ -82,7 +82,7 @@ namespace aulasem2
 
         private void atualizarAlunoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            atualizarAluno form5 = new atualizarAluno();
+            Form5 form5 = new Form5();
             form5.MdiParent = this;
             form5.Show();
             groupBox1.Visible = false;
@@ -90,7 +90,7 @@ namespace aulasem2
 
         private void cadastrarModalidadeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            cadastrarModalidade form6 = new cadastrarModalidade();
+            Form6 form6 = new Form6();
             form6.MdiParent = this;
             form6.Show();
             groupBox1.Visible = false;
@@ -103,7 +103,7 @@ namespace aulasem2
 
         private void consultarModalidadeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            consultarModalidade form7 = new consultarModalidade();
+            Form7 form7 = new Form7();
             form7.MdiParent = this;
             form7.Show();
             groupBox1.Visible = false;
@@ -111,49 +111,9 @@ namespace aulasem2
 
         private void excluirModalidadeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            excluirModalidade form8 = new excluirModalidade();
+            Form8 form8 = new Form8();
             form8.MdiParent = this;
             form8.Show();
-            groupBox1.Visible = false;
-        }
-
-        private void atualizarModalidadeToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            atualizarModalidade atualizarModalidade = new atualizarModalidade();
-            atualizarModalidade.MdiParent = this;
-            atualizarModalidade.Show();
-            groupBox1.Visible = false;
-        }
-
-        private void cadastrarTurmaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            cadTurma cadTurma = new cadTurma();
-            cadTurma.MdiParent = this;
-            cadTurma.Show();
-            groupBox1.Visible = false;
-        }
-
-        private void excluirTurmaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            excTurma excTurma = new excTurma();
-            excTurma.MdiParent = this;
-            excTurma.Show();
-            groupBox1.Visible = false;
-        }
-
-        private void consultarTurmaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            consTurma consTurma = new consTurma();
-            consTurma.MdiParent = this;
-            consTurma.Show();
-            groupBox1.Visible = false;
-        }
-
-        private void atualizarTurmaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            atuaTurma atuaTurma = new atuaTurma();
-            atuaTurma.MdiParent = this;
-            atuaTurma.Show();
             groupBox1.Visible = false;
         }
     }
