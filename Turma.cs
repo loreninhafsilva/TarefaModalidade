@@ -52,7 +52,7 @@ namespace aulasem2
             try
             {
                 DAO_Conexao.con.Open();
-                MySqlCommand insere = new MySqlCommand("insert into Estudio_Turma (professorTurma, idModalidade, diasemanaTurma, nalunosmatriculadosTurma) values " + "('" + Professor + "'," + Modalidade + ",'" + Dia_semana + "'," + qtde_alunos + ")", DAO_Conexao.con);
+                MySqlCommand insere = new MySqlCommand("insert into Estudio_Turma (professorTurma, idModalidade, diasemanaTurma, horaTurma, nalunosmatriculadosTurma) values " + "('" + Professor + "'," + Modalidade + ",'" + Dia_semana + "','" + hora + "'," + qtde_alunos + ")", DAO_Conexao.con);
                 insere.ExecuteNonQuery();
                 cad = true;
             }
@@ -93,6 +93,78 @@ namespace aulasem2
             }
             return b;
 
+        }
+
+        public MySqlDataReader consultarTodasTurma()
+        {
+            MySqlDataReader resultado = null;
+            try
+            {
+                DAO_Conexao.con.Open();
+                MySqlCommand consulta = new MySqlCommand("SELECT * FROM Estudio_Turma", DAO_Conexao.con);
+                resultado = consulta.ExecuteReader();
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+            return resultado;
+        }
+
+        public MySqlDataReader consultarTurmaModalidade(int modalidade)
+        {
+            MySqlDataReader resultado = null;
+            try
+            {
+                DAO_Conexao.con.Open();
+                MySqlCommand consulta = new MySqlCommand("SELECT * FROM Estudio_Turma where idModalidade ='" + modalidade + "'", DAO_Conexao.con);
+                resultado = consulta.ExecuteReader();
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+            return resultado;
+        }
+
+        public MySqlDataReader consultarTurmaDia(string dia)
+        {
+            MySqlDataReader resultado = null;
+            try
+            {
+                DAO_Conexao.con.Open();
+                MySqlCommand consulta = new MySqlCommand("SELECT * FROM Estudio_Turma where diasemanaTurma ='" + dia + "'", DAO_Conexao.con);
+                resultado = consulta.ExecuteReader();
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+            return resultado;
+        }
+
+        public bool excluirTurma()
+        {
+            bool exc = false;
+            try
+            {
+                DAO_Conexao.con.Open();
+                MySqlCommand excluir = new MySqlCommand("update Estudio_Turma set ativa " + "= 1 where idModalidade ='" + Modalidade + "'", DAO_Conexao.con);
+                excluir.ExecuteNonQuery();
+                exc = true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+            finally
+            {
+                DAO_Conexao.con.Close();
+            }
+            return exc;
         }
     }
 }

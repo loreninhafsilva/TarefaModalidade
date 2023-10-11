@@ -30,14 +30,14 @@ namespace aulasem2
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.btnExclur = new System.Windows.Forms.Button();
-            this.cbModalidade = new System.Windows.Forms.ComboBox();
-            this.cbDia = new System.Windows.Forms.ComboBox();
             this.cbHora = new System.Windows.Forms.ComboBox();
+            this.cbDia = new System.Windows.Forms.ComboBox();
+            this.cbModalidade = new System.Windows.Forms.ComboBox();
+            this.btnExclur = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,32 +58,29 @@ namespace aulasem2
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Excluir Turma";
             // 
-            // label1
+            // cbHora
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(58, 59);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(95, 20);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Modalidade:";
+            this.cbHora.FormattingEnabled = true;
+            this.cbHora.Location = new System.Drawing.Point(184, 153);
+            this.cbHora.Name = "cbHora";
+            this.cbHora.Size = new System.Drawing.Size(216, 28);
+            this.cbHora.TabIndex = 6;
             // 
-            // label2
+            // cbDia
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(58, 109);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(120, 20);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Dia da semana:";
+            this.cbDia.FormattingEnabled = true;
+            this.cbDia.Location = new System.Drawing.Point(184, 106);
+            this.cbDia.Name = "cbDia";
+            this.cbDia.Size = new System.Drawing.Size(216, 28);
+            this.cbDia.TabIndex = 5;
             // 
-            // label3
+            // cbModalidade
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(58, 156);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(48, 20);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Hora:";
+            this.cbModalidade.FormattingEnabled = true;
+            this.cbModalidade.Location = new System.Drawing.Point(184, 56);
+            this.cbModalidade.Name = "cbModalidade";
+            this.cbModalidade.Size = new System.Drawing.Size(216, 28);
+            this.cbModalidade.TabIndex = 4;
             // 
             // btnExclur
             // 
@@ -95,29 +92,32 @@ namespace aulasem2
             this.btnExclur.UseVisualStyleBackColor = true;
             this.btnExclur.Click += new System.EventHandler(this.button1_Click);
             // 
-            // cbModalidade
+            // label3
             // 
-            this.cbModalidade.FormattingEnabled = true;
-            this.cbModalidade.Location = new System.Drawing.Point(184, 56);
-            this.cbModalidade.Name = "cbModalidade";
-            this.cbModalidade.Size = new System.Drawing.Size(216, 28);
-            this.cbModalidade.TabIndex = 4;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(58, 156);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(48, 20);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Hora:";
             // 
-            // cbDia
+            // label2
             // 
-            this.cbDia.FormattingEnabled = true;
-            this.cbDia.Location = new System.Drawing.Point(184, 106);
-            this.cbDia.Name = "cbDia";
-            this.cbDia.Size = new System.Drawing.Size(216, 28);
-            this.cbDia.TabIndex = 5;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(58, 109);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(120, 20);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Dia da semana:";
             // 
-            // cbHora
+            // label1
             // 
-            this.cbHora.FormattingEnabled = true;
-            this.cbHora.Location = new System.Drawing.Point(184, 153);
-            this.cbHora.Name = "cbHora";
-            this.cbHora.Size = new System.Drawing.Size(216, 28);
-            this.cbHora.TabIndex = 6;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(58, 59);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(95, 20);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Modalidade:";
             // 
             // excTurma
             // 
